@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    jdbcUrl: jdbc:h2:mem:testdb;Mode=Oracle;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+
+server:
+  port: 8091
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+  level:
+    root: INFO
+    web: ERROR
+    org.hibernate: INFO
+
