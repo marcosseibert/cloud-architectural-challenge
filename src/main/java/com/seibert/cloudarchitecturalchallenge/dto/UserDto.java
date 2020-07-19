@@ -12,7 +12,7 @@ public class UserDto {
         this.name = user.getName();
         this.email = user.getEmail();
         this.cpf = user.getCpf();
-        this.smoker = user.isSmoker();
+        this.smoker = user.getSmoker();
     }
 
     private String name;
@@ -22,10 +22,10 @@ public class UserDto {
     private String cpf;
 
     @JsonIgnore
-    private boolean smoker;
+    private String smoker;
 
     @JsonProperty("smoker")
     public String smoker() {
-        return smoker ? "Fumante" : "Não Fumante";
+        return smoker == "s" ? "Fumante" : "Não Fumante";
     }
 }

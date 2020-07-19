@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/seibertpg
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://seibert-db-instance.c0yvu8anmnx8.us-east-1.rds.amazonaws.com/seibertpg
+    username: seibert
+    password: seibert123
   jpa:
     generate-ddl: false
     hibernate:
