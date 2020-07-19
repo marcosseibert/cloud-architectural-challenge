@@ -1,7 +1,7 @@
 FROM maven:3.6.0-jdk-11 AS build
 COPY src /usr/app/src
 COPY pom.xml /usr/app
-RUN mvn -f /usr/app/pom.xml clean install
+RUN mvn -f /usr/app/pom.xml clean install -DskipTests
 
 FROM openjdk:11-jdk
 VOLUME /tmp
